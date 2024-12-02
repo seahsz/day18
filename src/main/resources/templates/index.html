@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpark Rates in Singapore</title>
+    <link href="style.css" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="/images/parking.png">
+        <h1>Carpark rates in Singapore</h1>
+    </div>
+
+    <table data-th-if="${not #lists.isEmpty(carparkList)}">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Carpark Name</th>
+                <th>Category</th>
+                <th>Weekday Rate 1</th>
+                <th>Weekday Rate 2</th>
+                <th>Saturday Rate</th>
+                <th> Sunday / PH Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="carpark : ${carparkList}" data-th-object="${carpark}">
+                <td data-th-text="*{id}"></td>
+                <td data-th-text="*{name}"></td>
+                <td data-th-text="*{category}"></td>
+                <td data-th-text="*{weekday1Rate}"></td>
+                <td data-th-text="*{weekday2Rate}"></td>
+                <td data-th-text="*{saturdayRate}"></td>
+                <td data-th-text="*{sundayPhRate}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

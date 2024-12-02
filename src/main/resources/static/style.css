@@ -1,0 +1,73 @@
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+thead th:nth-child(1) {
+    width: 1%;
+}
+
+thead th:nth-child(2) {
+    width: 15%;
+}
+
+thead th:nth-child(3) {
+    width: 10%;
+}
+
+thead th:nth-child(4) {
+    width: 18.5%;
+}
+
+thead th:nth-child(5) {
+    width: 18.5%;
+}
+
+thead th:nth-child(6) {
+    width: 18.5%;
+}
+
+thead th:nth-child(7) {
+    width: 18.5%;
+}
+
+/* Table Header Color */
+thead {
+    background-color: royalblue;
+}
+
+/* Zebra Striping */
+tbody tr:nth-child(odd) {
+    background-color: #B0E0E6;
+}
+
+/* Typography */
+tbody td {
+    text-align: center;
+}
+
+/* Header */
+.header img {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.header h1 {
+    position: relative;
+    left: 14px;
+    top: 14px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}

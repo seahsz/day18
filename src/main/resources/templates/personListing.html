@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Listing</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <h1> Current User Listing </h1>
+    <form method="GET" action="/person">
+        <button type="submit">Return to Add New User</button>
+    </form>
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Postal Code</th>
+            <th>Phone Number</th>
+        </thead>
+        <tbody>
+            <tr data-th-each="p : ${personList}" data-th-object="${p}">
+                <td><span data-th-text="*{id}"></span></td>
+                <td><span data-th-text="*{fullName}"></span></td>
+                <td><span data-th-text="*{email}"></span></td>
+                <td><span data-th-text="*{postalCode}"></span></td>
+                <td><span data-th-text="*{phoneNumber}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+</html>
